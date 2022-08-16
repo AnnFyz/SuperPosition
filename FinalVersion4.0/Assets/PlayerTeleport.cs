@@ -128,25 +128,25 @@ public class PlayerTeleport : MonoBehaviour
         
 
 
-        if (other.CompareTag("PinkTeleporter"))
+        if (other.CompareTag("PinkTeleporter") && other != null)
         {
             inrange = true;
             Debug.Log("teleporter detektet");
            PinkTeleporter = other.gameObject; 
         }
-        if(other.CompareTag("BlueTeleporter"))
+        if(other.CompareTag("BlueTeleporter") && other != null)
         {
             inrange = true;
             Debug.Log("teleporter detektet");
            BlueTeleporter = other.gameObject; 
         }
-        if(other.CompareTag("GreenTeleporter"))
+        if(other.CompareTag("GreenTeleporter") && other != null)
         {
             inrange = true;
             Debug.Log("teleporter detektet");
            GreenTeleporter = other.gameObject; 
         }
-        if(other.CompareTag("OrangeTeleporter"))
+        if(other.CompareTag("OrangeTeleporter") && other != null)
         {
             inrange = true;
             Debug.Log("teleporter detektet");
@@ -159,7 +159,7 @@ public class PlayerTeleport : MonoBehaviour
     {
         WarningWindow.SetActive(false);
 
-        if (other.CompareTag("PinkTeleporter"))
+        if (other.CompareTag("PinkTeleporter") && other != null)
         {
             inrange = false;
             if (other.gameObject == PinkTeleporter)
@@ -168,7 +168,7 @@ public class PlayerTeleport : MonoBehaviour
               PinkTeleporter = null;
           }   
         }
-        if(other.CompareTag("BlueTeleporter"))
+        if(other.CompareTag("BlueTeleporter") && other != null)
         {
          if(other.gameObject == BlueTeleporter)
           {
@@ -177,7 +177,7 @@ public class PlayerTeleport : MonoBehaviour
               BlueTeleporter = null;
           }   
         }
-        if(other.CompareTag("OrangeTeleporter"))
+        if(other.CompareTag("OrangeTeleporter") && other != null)
         {
          if(other.gameObject == OrangeTeleporter)
           {
@@ -186,7 +186,7 @@ public class PlayerTeleport : MonoBehaviour
               OrangeTeleporter = null;
           }   
         }
-        if(other.CompareTag("GreenTeleporter"))
+        if(other.CompareTag("GreenTeleporter") && other != null)
         {
          if(other.gameObject == GreenTeleporter)
           {
