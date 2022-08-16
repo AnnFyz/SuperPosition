@@ -22,7 +22,7 @@ public class PrefabVisual : MonoBehaviour
         visualTileArray = new Transform[grid.GetGridX(), grid.GetGridY()];
         for(int x= 0; x < grid.GetGridX(); x++){
             for(int y = 0; y < grid.GetGridY(); y++){
-                Vector3 gridPosition = new Vector3(x,y) * grid.GetGridSize() + Vector3.one*grid.GetGridSize() *.5f + new Vector3(-43f, -5f); //GRID ORIGIN
+                Vector3 gridPosition = new Vector3(x,y) * grid.GetGridSize() + Vector3.one*grid.GetGridSize() *.5f + new Vector3(-50f, -10f); //GRID ORIGIN
                 Transform visualTile = CreateVisualTile(gridPosition);
                 visualTileArray[x,y] = visualTile;
                 visualTileList.Add(visualTile);
