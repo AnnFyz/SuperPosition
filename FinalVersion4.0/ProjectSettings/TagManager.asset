@@ -16,6 +16,7 @@ TagManager:
   - Room4
   - Room1
   - UIInventory
+  - BlueTeleporter
   layers:
   - Default
   - TransparentFX

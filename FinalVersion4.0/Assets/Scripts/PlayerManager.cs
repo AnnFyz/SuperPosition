@@ -78,20 +78,20 @@ public class PlayerManager : MonoBehaviour
     {
         isPickable = false;
     }
-        //private void OnTriggerStay2D(Collider2D collider)
-        //{
-        //    ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
+    //private void OnTriggerStay2D(Collider2D collider)
+    //{
+    //    ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
 
-        //    //if (itemWorld != null && Input.GetMouseButtonDown(0))
-        //    //{
-        //    //    // Touching Item
-        //    //    Debug.Log("COLLIDER");
-        //    //    inventory.AddItem(itemWorld.GetItem());
-        //    //    itemWorld.DestroySelf();
-        //    //}
-        //}
+    //    //if (itemWorld != null && Input.GetMouseButtonDown(0))
+    //    //{
+    //    //    // Touching Item
+    //    //    Debug.Log("COLLIDER");
+    //    //    inventory.AddItem(itemWorld.GetItem());
+    //    //    itemWorld.DestroySelf();
+    //    //}
+    //}
 
-        public void UseItem(Item item)
+    public void UseItem(Item item)
     {
         switch (item.itemType)
         {
@@ -196,30 +196,11 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    // private void DamageFlash() {
-    //     materialTintColor.SetTintColor(new Color(1, 0, 0, 1f));
-    // }
-
-    // public void DamageKnockback(Vector3 knockbackDir, float knockbackDistance) {
-    //     transform.position += knockbackDir * knockbackDistance;
-    //     DamageFlash();
-    // }
+  
 
     public Vector3 GetPosition()
     {
         return transform.position;
     }
-
-    // public void FlashGreen() {
-    //     materialTintColor.SetTintColor(new Color(0, 1, 0, 1));
-    // }
-
-    // public void FlashRed() {
-    //     materialTintColor.SetTintColor(new Color(1, 0, 0, 1));
-    // }
-
-    // public void FlashBlue() {
-    //     materialTintColor.SetTintColor(new Color(0, 0, 1, 1));
-    // }
 
 }

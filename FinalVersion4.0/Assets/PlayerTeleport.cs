@@ -9,9 +9,9 @@ public class PlayerTeleport : MonoBehaviour
     public GameObject PopenParticles;
     public GameObject OopenParticles;
 
-    
+
     public GameObject WarningWindow;
-    
+
     public GameObject PinkTeleporter;
     public GameObject BlueTeleporter;
     public GameObject GreenTeleporter;
@@ -20,142 +20,93 @@ public class PlayerTeleport : MonoBehaviour
     public bool isPinkTeleporterOpen;
 
     public bool inrange = false;
-    
-    
+
+
     public bool isGreenTeleporterOpen;
     public bool isOrangeTeleporterOpen;
-    public Animator anim;
-    public Animator anim1;
-    public Animator anim2;
-
-    //[SerializeField] private AudioSource winSoundEffect;
-    //[SerializeField] private AudioSource wrongSoundEffect;
 
     void Start()
     {
-       
+
         isPinkTeleporterOpen = false;
-       
-        isGreenTeleporterOpen =false;
-        isOrangeTeleporterOpen =false;
+
+        isGreenTeleporterOpen = false;
+        isOrangeTeleporterOpen = false;
         WarningWindow.SetActive(false);
 
-
-        //anim.SetBool("open", false);
-        //anim3.SetBool("open", false);
-        //anim2.SetBool("open", false);
-
-        
     }
     void Update()
     {
-        if (isGreenTeleporterOpen == true)
-        {
-            
-           Instantiate(GopenParticles);
-            //anim.SetBool("open", true);
-            
-
-        }
-         if (isPinkTeleporterOpen == true)
-        {
-            
-           Instantiate(PopenParticles);
-            //anim1.SetBool("open", true);
-            
-
-        }
-         if (isOrangeTeleporterOpen == true)
-        {
-            
-           Instantiate(OopenParticles);
-            //anim2.SetBool("open", true);
-            
-
-        }
-
-
-
-
-
+      
         if (Input.GetKeyDown(KeyCode.E))
         {
 
             if (PinkTeleporter != null && isPinkTeleporterOpen)
-                    {
-                         anim1.SetBool("open", true);
-                        transform.position = PinkTeleporter.GetComponent<Teleporter>().GetDestination().position;
-                        teleportet = true;
-                    }
-                    if(BlueTeleporter != null )
-                    {
-                         
-                         transform.position = BlueTeleporter.GetComponent<Teleporter>().GetDestination().position;
-                        teleportet = true;
-                    }
-                    if(GreenTeleporter != null && isGreenTeleporterOpen)
-                    {
-                         anim.SetBool("open", true);
-                        transform.position = GreenTeleporter.GetComponent<Teleporter>().GetDestination().position;
-                        teleportet = true;
-                    }
-                    if(OrangeTeleporter != null && isOrangeTeleporterOpen)
-                    {
+            {
+               
+                transform.position = PinkTeleporter.GetComponent<Teleporter>().GetDestination().position;
+                teleportet = true;
+            }
+            if (BlueTeleporter != null)
+            {
 
-                        anim2.SetBool("open", true);
-                        transform.position = OrangeTeleporter.GetComponent<Teleporter>().GetDestination().position;
-                        teleportet = true;
-                    }
-                else
-                 {
+                transform.position = BlueTeleporter.GetComponent<Teleporter>().GetDestination().position;
+                teleportet = true;
+            }
+            if (GreenTeleporter != null && isGreenTeleporterOpen)
+            {
+               
+                transform.position = GreenTeleporter.GetComponent<Teleporter>().GetDestination().position;
+                teleportet = true;
+            }
+            if (OrangeTeleporter != null && isOrangeTeleporterOpen)
+            {
 
-                     if (inrange)
-                    WarningWindow.SetActive(true);
-                //wrongSoundEffect.Play();
+                transform.position = OrangeTeleporter.GetComponent<Teleporter>().GetDestination().position;
+                teleportet = true;
+            }
+            else
+            {
 
-                }
-
-
-
-
+                if (inrange)
+                WarningWindow.SetActive(true);
+  
+            }
 
         }
     }
 
-     void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-
-        
-
 
         if (other.CompareTag("PinkTeleporter") && other != null)
         {
             inrange = true;
             Debug.Log("teleporter detektet");
-           PinkTeleporter = other.gameObject; 
+            PinkTeleporter = other.gameObject;
         }
-        if(other.CompareTag("BlueTeleporter") && other != null)
+        if (other.CompareTag("BlueTeleporter") && other != null)
         {
             inrange = true;
             Debug.Log("teleporter detektet");
-           BlueTeleporter = other.gameObject; 
+            BlueTeleporter = other.gameObject;
         }
-        if(other.CompareTag("GreenTeleporter") && other != null)
+        if (other.CompareTag("GreenTeleporter") && other != null)
         {
             inrange = true;
             Debug.Log("teleporter detektet");
-           GreenTeleporter = other.gameObject; 
+            GreenTeleporter = other.gameObject;
         }
-        if(other.CompareTag("OrangeTeleporter") && other != null)
+        if (other.CompareTag("OrangeTeleporter") && other != null)
         {
             inrange = true;
             Debug.Log("teleporter detektet");
-           OrangeTeleporter = other.gameObject; 
+            OrangeTeleporter = other.gameObject;
         }
     }
-     
 
-   void OnTriggerExit2D(Collider2D other)
+
+    void OnTriggerExit2D(Collider2D other)
     {
         WarningWindow.SetActive(false);
 
@@ -163,37 +114,37 @@ public class PlayerTeleport : MonoBehaviour
         {
             inrange = false;
             if (other.gameObject == PinkTeleporter)
-          {
-              Debug.Log("player exits the teleporter");
-              PinkTeleporter = null;
-          }   
+            {
+                Debug.Log("player exits the teleporter");
+                PinkTeleporter = null;
+            }
         }
-        if(other.CompareTag("BlueTeleporter") && other != null)
+        if (other.CompareTag("BlueTeleporter") && other != null)
         {
-         if(other.gameObject == BlueTeleporter)
-          {
+            if (other.gameObject == BlueTeleporter)
+            {
                 inrange = false;
                 Debug.Log("player exits the teleporter");
-              BlueTeleporter = null;
-          }   
+                BlueTeleporter = null;
+            }
         }
-        if(other.CompareTag("OrangeTeleporter") && other != null)
+        if (other.CompareTag("OrangeTeleporter") && other != null)
         {
-         if(other.gameObject == OrangeTeleporter)
-          {
+            if (other.gameObject == OrangeTeleporter)
+            {
                 inrange = false;
                 Debug.Log("player exits the teleporter");
-              OrangeTeleporter = null;
-          }   
+                OrangeTeleporter = null;
+            }
         }
-        if(other.CompareTag("GreenTeleporter") && other != null)
+        if (other.CompareTag("GreenTeleporter") && other != null)
         {
-         if(other.gameObject == GreenTeleporter)
-          {
+            if (other.gameObject == GreenTeleporter)
+            {
                 inrange = false;
                 Debug.Log("player exits the teleporter");
-              GreenTeleporter = null;
-          }   
+                GreenTeleporter = null;
+            }
         }
     }
 }
