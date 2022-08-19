@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: da81aafeeb21baf4d96a01f3e8504cd0
+guid: 96bee03ac4316174187a423b7f6f6db8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,9 +42,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -100,93 +100,21 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: 643676DE-B07F-4515-99BA-848ABADB00C7_0
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 56
-        width: 1557
-        height: 905
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2375bdd866231ba4e8f05d7a4a304d2e
-      internalID: -1096412306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 643676DE-B07F-4515-99BA-848ABADB00C7_1
-      rect:
-        serializedVersion: 2
-        x: 1474
-        y: 925
-        width: 510
-        height: 515
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b91c248971cfe04d982695c0538c029
-      internalID: -90758843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 643676DE-B07F-4515-99BA-848ABADB00C7_2
-      rect:
-        serializedVersion: 2
-        x: 2205
-        y: 791
-        width: 483
-        height: 667
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54720b2d45ca6804785650aab35539d4
-      internalID: -275681179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 643676DE-B07F-4515-99BA-848ABADB00C7_3
-      rect:
-        serializedVersion: 2
-        x: 1869
-        y: 225
-        width: 514
-        height: 449
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2240400b56424da48b4492ea1f99c2b1
-      internalID: -1389397218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -197,11 +125,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      643676DE-B07F-4515-99BA-848ABADB00C7_2: -275681179
-      643676DE-B07F-4515-99BA-848ABADB00C7_0: -1096412306
-      643676DE-B07F-4515-99BA-848ABADB00C7_1: -90758843
-      643676DE-B07F-4515-99BA-848ABADB00C7_3: -1389397218
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
