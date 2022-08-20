@@ -8,7 +8,7 @@ public class ItemUIDescription : MonoBehaviour
 
     public ObjectsKind article;
     public int idArticle;
-
     public bool isItDesiredObj = false;
 
+  
 }

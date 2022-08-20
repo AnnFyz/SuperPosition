@@ -9,6 +9,8 @@ public class NewDialogue : MonoBehaviour
     //Window
     public bool IsStartedDialogEnded = false;
     public bool wasClickedYes = false;
+    public bool articleWasRecieved = false;
+    public bool IslastPhrase = false;
     public GameObject window;
     public GameObject answerButtons;
     //Indicator
@@ -67,13 +69,29 @@ public class NewDialogue : MonoBehaviour
     {
         EndDialogue();
     }
+
+    public void ArticleRecieved()
+    {
+        articleWasRecieved = true;
+        currentDialogue = keyDialogues;
+        EndDialogue();
+        StartDialogue();
+    }
+
+    public void SayThanks()
+    {
+        IslastPhrase = true;
+        currentDialogue = thanksgivingDialogues;
+
+    }
+
     //Start Dialogue
     public void StartDialogue()
     {
         if (started)
             return;
         //check which dialog to start now
-        if (!IsStartedDialogEnded && !wasClickedYes)
+        if (!IsStartedDialogEnded && !wasClickedYes && !articleWasRecieved && !IslastPhrase)
         {
             currentDialogue = startDialogues;
         }

@@ -16,12 +16,13 @@ public class Pickup : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            for (int i = 0; i < inventory.slots.Length; i++)
+            for (int i = 0; i < inventory.slotsObj.Length; i++)
             {
                 if(inventory.isFull[i] == false)
                 {
                     inventory.isFull[i] = true;
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
+                    Instantiate(itemButton, inventory.slotsObj[i].transform, false);
+                    inventory.FillArtickleIdArray();
                     Destroy(gameObject);
                     break;  //add item
                 }

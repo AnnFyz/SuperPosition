@@ -6,11 +6,10 @@ public class NewDialogueTrigger : MonoBehaviour
 {
     public NewDialogue dialogueScript;
     public bool playerDetected;
-    public Quests checkedArticle;
-
+   
     //Detect trigger with player
 
-   
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //If we triggerd the player enable playerdeteced and show indicator
@@ -38,10 +37,7 @@ public class NewDialogueTrigger : MonoBehaviour
         {
             dialogueScript.StartDialogue();
         }
-
-        if (playerDetected && Input.GetKeyDown(KeyCode.E))
-        {
-            dialogueScript.StartDialogue();
-        }
     }
+
+    
 }
