@@ -8,6 +8,7 @@ public class Quests : MonoBehaviour
     public GameObject desiredObj;
     public List<GameObject> allUIArticles;
     public GameObject keyUI;
+    public int givenKeyID;
     public bool isKeyWasGiven = false;
     NewInventory inventory;
     NewDialogueTrigger isPlayerInRange;
@@ -20,6 +21,7 @@ public class Quests : MonoBehaviour
         isPlayerInRange = GetComponent<NewDialogueTrigger>();
         dialogue = GetComponentInChildren<NewDialogue>();
         allUIArticles = new List<GameObject>(GameObject.FindGameObjectsWithTag("Slot"));
+        givenKeyID = keyUI.GetComponent<ItemUIDescription>().idKey;
     }
     public void CheckArticleAndGiveKey() // add change to dialogue state FIX CODE HERE
     {
@@ -31,7 +33,7 @@ public class Quests : MonoBehaviour
                 if (inventory.isFull[i] == false)
                 {
                     inventory.isFull[i] = true;
-
+                    inventory.FillKeyIdList(givenKeyID);
                     dialogue.ArticleRecieved();
                     Instantiate(keyUI, inventory.slotsObj[i].transform, false);
                     isKeyWasGiven = true; // to give a key only once
@@ -64,6 +66,7 @@ public class Quests : MonoBehaviour
 
     }
     
+
     private void Update()
     {
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7531399853767075337}
   - component: {fileID: 4477162368762210005}
   m_Layer: 5
-  m_Name: KeyUI
+  m_Name: 1KeyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,4 +91,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   article: 1
   idArticle: -10
-  isItDesiredObj: 0
+  idKey: 1

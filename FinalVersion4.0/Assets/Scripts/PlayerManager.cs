@@ -19,7 +19,6 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private DEight dialogue8;
     [SerializeField] private DNine dialogue9;
 
-    [SerializeField] private PlayerTeleport playerTeleport;
 
     public GameObject NPC1;
     public GameObject NPC2;
@@ -110,28 +109,28 @@ public class PlayerManager : MonoBehaviour
 
 
 
-                if (playerTeleport.PinkTeleporter != null)
-                {
-                    inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyForPinkPortal, amount = 1 });
-                    playerTeleport.isPinkTeleporterOpen = true;
-                }
-                break;
-            case Item.ItemType.KeyForOrangePortal:
-                if (playerTeleport.OrangeTeleporter != null)
-                {
-                    inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyForOrangePortal, amount = 1 });
-                    playerTeleport.isOrangeTeleporterOpen = true;
-                }
-                break;
+            //    if (playerTeleport.PinkTeleporter != null)
+            //    {
+            //        inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyForPinkPortal, amount = 1 });
+            //        playerTeleport.isPinkTeleporterOpen = true;
+            //    }
+            //    break;
+            //case Item.ItemType.KeyForOrangePortal:
+            //    if (playerTeleport.OrangeTeleporter != null)
+            //    {
+            //        inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyForOrangePortal, amount = 1 });
+            //        playerTeleport.isOrangeTeleporterOpen = true;
+            //    }
+            //    break;
 
 
-            case Item.ItemType.KeyForGreenPortal:
-                if (playerTeleport.GreenTeleporter != null)
-                {
-                    inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyForGreenPortal, amount = 1 });
-                    playerTeleport.isGreenTeleporterOpen = true;
-                }
-                break;
+            //case Item.ItemType.KeyForGreenPortal:
+            //    if (playerTeleport.GreenTeleporter != null)
+            //    {
+            //        inventory.RemoveItem(new Item { itemType = Item.ItemType.KeyForGreenPortal, amount = 1 });
+            //        playerTeleport.isGreenTeleporterOpen = true;
+            //    }
+            //    break;
             case Item.ItemType.RabbitPuppet:
                 if (dialogue1.started == true)
                 {

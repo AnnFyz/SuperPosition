@@ -90,5 +90,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   article: 0
-  idArticle: 1
-  isItDesiredObj: 0
+  idArticle: 4
+  idKey: -10

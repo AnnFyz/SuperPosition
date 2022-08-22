@@ -7,10 +7,11 @@ public class NewInventory : MonoBehaviour
     public bool[] isFull;
     public GameObject[] slotsObj;
     public List<int> artickleId;
+    public List<int> keyId;
     public bool isRightArticklea;
     public int currentDesiredArticleId;
 
-    public void FillArtickleIdArray()
+    public void FillArtickleIdList()
     {
         artickleId.Clear();
         for (int i = 0; i < isFull.Length; i++)
@@ -25,7 +26,13 @@ public class NewInventory : MonoBehaviour
         }
     }
 
-   
+    public void FillKeyIdList(int givenKeyId)
+    {
+        //keyId.Clear();
+        keyId.Add(givenKeyId);
+           
+    }
+
     public bool CheckCollectedObjects(int desiredObjId, int selectedArticleId) // find a right slot and destroy uiObj
     {
         currentDesiredArticleId = desiredObjId;

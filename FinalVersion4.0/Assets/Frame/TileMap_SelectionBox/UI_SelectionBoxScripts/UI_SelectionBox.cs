@@ -220,7 +220,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 Target.sizeDelta = new Vector2(newWidth, Target.sizeDelta.y);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(deltaPosX, 0);
                 //Debug.Log("LEFT");
-                Debug.Log(ped.delta.x);
+                //Debug.Log(ped.delta.x);
             }
 
 
@@ -244,7 +244,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 Target.sizeDelta = new Vector2(newWidth, Target.sizeDelta.y);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(deltaPosX, 0);
                 //Debug.Log("RIGHT");
-                Debug.Log(ped.delta.x);
+                //Debug.Log(ped.delta.x);
             }
         }
         if (verticalEdge != null)

@@ -22,7 +22,7 @@ public class Pickup : MonoBehaviour
                 {
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slotsObj[i].transform, false);
-                    inventory.FillArtickleIdArray();
+                    inventory.FillArtickleIdList();
                     Destroy(gameObject);
                     break;  //add item
                 }
