@@ -19,6 +19,7 @@ TagManager:
   - BlueTeleporter
   - NewInventory
   - Slot
+  - GameManager
   layers:
   - Default
   - TransparentFX
