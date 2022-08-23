@@ -100,7 +100,7 @@ public class EnemyBehavior : MonoBehaviour
             playersHealth.isPlayerAttacked = false;
 
             anim.SetBool("IsAttacking", false);
-            playerAnim.SetBool("IsAttacking", false);
+            //playerAnim.SetBool("IsAttacking", false);
 
             transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, speed * Time.deltaTime);
             if (Vector2.Distance(transform.position, moveSpot.position) < 0.2f || !isEnemyInRoom) //RANDOM MOVE
@@ -128,12 +128,12 @@ public class EnemyBehavior : MonoBehaviour
             if (Time.time > nextShotTime)
             {
                 //shoot
-                Instantiate(projectiele, transform.position, Quaternion.identity);
+                Instantiate(projectiele, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
                 nextShotTime = Time.time + timebetweenShots;
             }
 
             anim.SetBool("IsAttacking", true);
-            playerAnim.SetBool("IsAttacking", true);
+            //playerAnim.SetBool("IsAttacking", true);
 
             if (Vector2.Distance(transform.position, player.transform.position) > distance * 0.5f)
                 transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);

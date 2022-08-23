@@ -127,7 +127,7 @@ public class TeleporterWithKey : MonoBehaviour
 
         if (destination != null && playerDetected && Input.GetKeyDown(KeyCode.E) && WasUsedRightKey)
         {
-            player.transform.position = destination.position;
+            player.transform.position = new Vector3(destination.position.x, destination.position.y);
 
         }
     }
