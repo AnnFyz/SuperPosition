@@ -114,8 +114,8 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
         Target.GetComponent<RectTransform>().GetWorldCorners(fourCornersArray);
         bottomLeftHandlerPos = fourCornersArray[0];
         topRightHandlerPos = fourCornersArray[2];
-        //Debug.Log("topRightHandlerPos:" + topRightHandlerPos);
-        //Debug.Log("PlayerPos:" + PlayerPosition);
+        Debug.Log("topRightHandlerPos:" + topRightHandlerPos);
+        Debug.Log("PlayerPos:" + PlayerPosition);
 
         // if(PlayerPosition.x > bottomLeftHandlerPos.x && PlayerPosition.x < topRightHandlerPos.x && PlayerPosition.y > bottomLeftHandlerPos.y && PlayerPosition.y < topRightHandlerPos.y)
         // {
@@ -128,7 +128,15 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
         else{
             isPlayerInside = true;
         }
-       
+        if(isPlayerInside)
+        {
+            //this.gameObject.SetActive(true);
+            Debug.Log("player is inside");
+        }
+        else{
+            //this.gameObject.SetActive(false);
+            Debug.Log("is empty");
+        }
     }
 
     public float newWidth;
@@ -150,7 +158,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public void OnDrag(PointerEventData pointerEventData)
     {
         PointerEventData ped = (PointerEventData)pointerEventData;
-        //Debug.Log("IS DRAGGING");
+        Debug.Log("IS DRAGGING");
         //Target.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Target.rect.width + ped.delta.x);
         //Target.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Target.rect.height + ped.delta.y);
         RectTransform.Edge? horizontalEdge = null;
@@ -209,7 +217,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
                 Target.sizeDelta = new Vector2(newWidth, Target.sizeDelta.y);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(deltaPosX, 0);
-                //Debug.Log("Left");
+                Debug.Log("Left");
             }
 
             if (horizontalEdge == RectTransform.Edge.Right && ped.delta.x >= 0f)
@@ -219,8 +227,8 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
                 Target.sizeDelta = new Vector2(newWidth, Target.sizeDelta.y);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(deltaPosX, 0);
-                //Debug.Log("LEFT");
-                //Debug.Log(ped.delta.x);
+                Debug.Log("LEFT");
+                Debug.Log(ped.delta.x);
             }
 
 
@@ -232,7 +240,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
                 Target.sizeDelta = new Vector2(newWidth, Target.sizeDelta.y);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(deltaPosX, 0);
-                //Debug.Log("Right");
+                Debug.Log("Right");
             }
 
             if (horizontalEdge == RectTransform.Edge.Left && ped.delta.x <= 0f)
@@ -243,8 +251,8 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
                 Target.sizeDelta = new Vector2(newWidth, Target.sizeDelta.y);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(deltaPosX, 0);
-                //Debug.Log("RIGHT");
-                //Debug.Log(ped.delta.x);
+                Debug.Log("RIGHT");
+                Debug.Log(ped.delta.x);
             }
         }
         if (verticalEdge != null)
@@ -256,7 +264,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
                 Target.sizeDelta = new Vector2(Target.sizeDelta.x, newHeight);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(0, deltaPosY);
-                //Debug.Log("Bottom");
+                Debug.Log("Bottom");
             }
 
             if (verticalEdge == RectTransform.Edge.Top && ped.delta.y >= 0f)
@@ -266,7 +274,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
                 Target.sizeDelta = new Vector2(Target.sizeDelta.x, newHeight);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(0, deltaPosY);
-                //Debug.Log("BOTTOM");
+                Debug.Log("BOTTOM");
             }
             if (verticalEdge == RectTransform.Edge.Bottom && topRightHandlerPos.y <= maxHeighTop)
             {
@@ -275,7 +283,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
                 Target.sizeDelta = new Vector2(Target.sizeDelta.x, newHeight);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(0, deltaPosY);
-                //Debug.Log("Top");
+                Debug.Log("Top");
             }
 
             if (verticalEdge == RectTransform.Edge.Bottom && ped.delta.y <= 0f)
@@ -285,7 +293,7 @@ public class UI_SelectionBox : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
                 Target.sizeDelta = new Vector2(Target.sizeDelta.x, newHeight);
                 Target.anchoredPosition = Target.anchoredPosition + new Vector2(0, deltaPosY);
-                //Debug.Log("TOP");
+                Debug.Log("TOP");
             }
         }
     }

@@ -41,8 +41,7 @@ public class SetRoomSize : MonoBehaviour
             topRightHandlerPos = fourCornersArray[2];
             topRightHandlerGridX = Mathf.FloorToInt(topRightHandlerPos.x/gridSize);
             topRightHandlerGridY = Mathf.FloorToInt(topRightHandlerPos.y/gridSize);
-            //Debug.Log(topRightHandlerGridX + "+" + topRightHandlerGridY);
-            //Debug.Log(bottomLeftHandlerGridX + "+" + bottomLeftHandlerGridY);
+
 
             // for(int i = bottomLeftHandlerGridX; i <= topRightHandlerGridX; i++){
             //     for(int j = bottomLeftHandlerGridY; j <= topRightHandlerGridY; j++){

@@ -7,7 +7,7 @@ public class Map{
     private Grid<MapGridObject> grid;
     public float gridSize = 0.75f;
     public Map(){
-        grid = new Grid<MapGridObject>(55,50, gridSize, new Vector3(-50,-50), (Grid<MapGridObject> g, int x, int y) => new MapGridObject(g, x, y));      //SET GRID SIZE
+        grid = new Grid<MapGridObject>(55,80, gridSize, new Vector3(-50,-50), (Grid<MapGridObject> g, int x, int y) => new MapGridObject(g, x, y));       //SET GRID SIZE
     }
     public Grid<MapGridObject> GetGrid(){
         return grid;
