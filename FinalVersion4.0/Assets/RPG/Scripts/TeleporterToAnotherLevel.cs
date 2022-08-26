@@ -6,9 +6,10 @@ public class TeleporterToAnotherLevel : MonoBehaviour
 {
 
     public int wantedKeyId;
-    public bool WasUsedRightKey = false;
+    public bool WasUsedRightKey;
     public GameObject windowNoKey;
     public GameObject windowHasKey;
+    public GameObject destinationPoint;
     public bool playerDetected;
     public GameObject player;
     public List<GameObject> allKeyArticles;
@@ -107,6 +108,7 @@ public class TeleporterToAnotherLevel : MonoBehaviour
         if (playerDetected && Input.GetKeyDown(KeyCode.E) && WasUsedRightKey)
         {
             gameManager.LoadScene();//Teleport to another level
+            player.transform.position = destinationPoint.transform.position;
 
         }
     }

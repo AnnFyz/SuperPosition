@@ -19,10 +19,11 @@ public class GameManager : MonoBehaviour
     {
         pauseScreen.SetActive(false);
         optionsScreen.SetActive(false);
+        indexScene++;
     }
     public void LoadScene()
     {
-        SceneManager.LoadScene(indexScene++);
+        SceneManager.LoadScene(indexScene);
     }
 
     public void PauseGame()
