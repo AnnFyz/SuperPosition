@@ -48,7 +48,7 @@ public class ProjectTile : MonoBehaviour
             if (healthComponent != null)
             {
                 healthComponent.TakeDamage(5);
-                healthComponent.isPlayerAttacked = true;
+                //healthComponent.isPlayerAttacked = true;
             }
             
         }
@@ -56,7 +56,7 @@ public class ProjectTile : MonoBehaviour
         {
             //playerAnim.SetBool("Damage", false);
             isAttacked = false;
-            healthComponent.isPlayerAttacked = false;
+            //healthComponent.isPlayerAttacked = false;
             Destroy(gameObject, 1f);
         }
        

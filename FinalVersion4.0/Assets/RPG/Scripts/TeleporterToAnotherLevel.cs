@@ -6,7 +6,7 @@ public class TeleporterToAnotherLevel : MonoBehaviour
 {
 
     public int wantedKeyId;
-    public bool WasUsedRightKey;
+    public bool WasUsedRightKey = false;
     public GameObject windowNoKey;
     public GameObject windowHasKey;
     public bool playerDetected;

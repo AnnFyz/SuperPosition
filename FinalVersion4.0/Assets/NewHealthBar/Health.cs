@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     public float healingFreq = 1f;
     public  int healingAmount = 1;
     public Animator playerAnim;
-    void Start() {
+    void Awake () {
         currentHealth = maxHealth;
         playerAnim = GetComponentInChildren<Animator>();
     }
@@ -34,16 +34,17 @@ public class Health : MonoBehaviour
 
     public void Update()
     {
-        if ((currentHealth < maxHealth) && !isHealing && !isPlayerAttacked && currentHealth < 80)
+        if ((currentHealth < maxHealth) && !isHealing && !isPlayerAttacked && currentHealth < 70)
         {
+
             isHealing = true;
-            //isPlayerAttacked = false;
             StartCoroutine(SlowHeal());
         }
+       
 
-        if (isHealing && !isPlayerAttacked)
+        if (!isPlayerAttacked)
         {
-            //isPlayerAttacked = false;
+            
             playerAnim.SetBool("IsAttacking", false);
 
         }

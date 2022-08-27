@@ -20,6 +20,8 @@ TagManager:
   - NewInventory
   - Slot
   - GameManager
+  - Room7
+  - Room8
   layers:
   - Default
   - TransparentFX

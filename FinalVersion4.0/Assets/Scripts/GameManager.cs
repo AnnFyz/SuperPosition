@@ -13,17 +13,30 @@ public class GameManager : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject loseScreen;
     public GameObject optionsScreen;
-
+    public Health playerHealth;
     // win scene
     private void Awake()
     {
         pauseScreen.SetActive(false);
         optionsScreen.SetActive(false);
+        loseScreen.SetActive(false);
         indexScene++;
     }
-    public void LoadScene()
+
+    private void Start()
+    {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+    }
+
+        public void LoadScene()
     {
         SceneManager.LoadScene(indexScene);
+    }
+
+    public void LoadScene(int index)
+    {
+        SceneManager.LoadScene(index);
+        Time.timeScale = 1;
     }
 
     public void PauseGame()
@@ -57,6 +70,12 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void TryAgain(int index)
+    {
+        LoadScene(index);
+        playerHealth.currentHealth = 100;
+        Time.timeScale = 1;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !inOptionsMenu)
@@ -64,6 +83,12 @@ public class GameManager : MonoBehaviour
             PauseGame();
             pauseScreen.SetActive(true);
             inPauseMenu = true;
+        }
+
+        if (playerHealth.currentHealth <= 0)
+        {
+            loseScreen.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }

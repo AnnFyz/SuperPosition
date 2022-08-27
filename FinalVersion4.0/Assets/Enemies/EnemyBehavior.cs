@@ -96,10 +96,16 @@ public class EnemyBehavior : MonoBehaviour
         if (Vector2.Distance(transform.position, player.transform.position) > distance * 1.5f || !isAttacked) //RANDOM MOVE // ADD 
         {
             //if player is not in radius move between patrol points
-            isAttacked = false;
-            playersHealth.isPlayerAttacked = false;
+            if (isEnemyInRoom)
+            {
+                isAttacked = false;
+                playersHealth.isPlayerAttacked = false;
+                //anim.SetBool("IsAttacking", false);
+            }
 
             anim.SetBool("IsAttacking", false);
+
+
             //playerAnim.SetBool("IsAttacking", false);
 
             transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, speed * Time.deltaTime);
@@ -124,7 +130,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             //if near by attack
             isAttacked = true;
-            playersHealth.isPlayerAttacked = true;
+            //playersHealth.isPlayerAttacked = true;
             if (Time.time > nextShotTime)
             {
                 //shoot
