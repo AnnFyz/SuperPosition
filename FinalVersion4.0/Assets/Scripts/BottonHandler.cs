@@ -7,13 +7,10 @@ using UnityEngine.SceneManagement;
 public class BottonHandler : MonoBehaviour
 {
     public Button button;
-    public int indexNextScene;
-    static int mainSceneIndex = 0;
     public bool isItOptionsMenu;
 
     public GameObject optionsMenu;
     public GameObject mainMenu;
-
     public void LoadNewScene(int index)
     {
         SceneManager.LoadScene(index);
@@ -44,4 +41,14 @@ public class BottonHandler : MonoBehaviour
         }
        
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+    }
+
 }

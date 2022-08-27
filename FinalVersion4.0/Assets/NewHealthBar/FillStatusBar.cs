@@ -13,7 +13,8 @@ public class FillStatusBar : MonoBehaviour
 
 
     private void Awake() {
-        slider = GetComponent<Slider>();       
+        slider = GetComponent<Slider>();
+        health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
     private void Update() {
         float fillValue = (float)health.currentHealth / (float)health.maxHealth;     

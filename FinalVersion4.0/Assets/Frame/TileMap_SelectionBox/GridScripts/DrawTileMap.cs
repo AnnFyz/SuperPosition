@@ -9,7 +9,7 @@ public class DrawTileMap : MonoBehaviour
     private Map map;
     //private bool isGameActive;
 
-    private void Awake()     
+    private void Start()     
     {
         map = new Map();
         prefabVisual.Setup(map.GetGrid());//call grid setup

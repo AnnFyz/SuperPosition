@@ -20,7 +20,7 @@ public class WASDSteuerung : MonoBehaviour
     Vector2 movement;
 
     public int damage;
-    public GameObject dieScreen;
+    //public GameObject dieScreen;
 
 
     //[SerializeField] private UI_Inventory uiInventory;
@@ -81,7 +81,7 @@ public class WASDSteuerung : MonoBehaviour
         if (damage > 99)
         { 
             Die();
-            dieScreen.SetActive(true);
+            //dieScreen.SetActive(true);
         }
     }
 

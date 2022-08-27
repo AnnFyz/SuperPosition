@@ -131,25 +131,25 @@ public class PlayerTeleport : MonoBehaviour
         if (other.CompareTag("PinkTeleporter"))
         {
             inrange = true;
-            Debug.Log("teleporter detektet");
+           // Debug.Log("teleporter detektet");
            PinkTeleporter = other.gameObject; 
         }
         if(other.CompareTag("BlueTeleporter"))
         {
             inrange = true;
-            Debug.Log("teleporter detektet");
+            //Log("teleporter detektet");
            BlueTeleporter = other.gameObject; 
         }
         if(other.CompareTag("GreenTeleporter"))
         {
             inrange = true;
-            Debug.Log("teleporter detektet");
+            //Debug.Log("teleporter detektet");
            GreenTeleporter = other.gameObject; 
         }
         if(other.CompareTag("OrangeTeleporter"))
         {
             inrange = true;
-            Debug.Log("teleporter detektet");
+            //Debug.Log("teleporter detektet");
            OrangeTeleporter = other.gameObject; 
         }
     }
@@ -164,7 +164,7 @@ public class PlayerTeleport : MonoBehaviour
             inrange = false;
             if (other.gameObject == PinkTeleporter)
           {
-              Debug.Log("player exits the teleporter");
+              //Debug.Log("player exits the teleporter");
               PinkTeleporter = null;
           }   
         }
@@ -173,7 +173,7 @@ public class PlayerTeleport : MonoBehaviour
          if(other.gameObject == BlueTeleporter)
           {
                 inrange = false;
-                Debug.Log("player exits the teleporter");
+                //Debug.Log("player exits the teleporter");
               BlueTeleporter = null;
           }   
         }
@@ -182,7 +182,7 @@ public class PlayerTeleport : MonoBehaviour
          if(other.gameObject == OrangeTeleporter)
           {
                 inrange = false;
-                Debug.Log("player exits the teleporter");
+                //Debug.Log("player exits the teleporter");
               OrangeTeleporter = null;
           }   
         }
@@ -191,7 +191,7 @@ public class PlayerTeleport : MonoBehaviour
          if(other.gameObject == GreenTeleporter)
           {
                 inrange = false;
-                Debug.Log("player exits the teleporter");
+               // Debug.Log("player exits the teleporter");
               GreenTeleporter = null;
           }   
         }

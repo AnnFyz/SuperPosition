@@ -29,7 +29,7 @@ public class DialogueOne : MonoBehaviour
 
     public Item item;
 
-    public Animator Anim;
+    //public Animator Anim;
 
     private void Awake() 
     {
@@ -56,7 +56,7 @@ public class DialogueOne : MonoBehaviour
     {
         if(started)
         return;
-        Anim.SetBool("DialogeStarted", true);
+        //Anim.SetBool("DialogeStarted", true);
 
         //Boolean that indicate that we have started
         started = true;
@@ -87,7 +87,7 @@ public class DialogueOne : MonoBehaviour
     public void EndDialogue()
     {
 
-        Anim.SetBool("DialogeStarted", false);
+       // Anim.SetBool("DialogeStarted", false);
         started = false;
         waitForNext = false;
         StopAllCoroutines();
