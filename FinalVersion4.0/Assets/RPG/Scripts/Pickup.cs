@@ -20,6 +20,7 @@ public class Pickup : MonoBehaviour
             {
                 if(inventory.isFull[i] == false)
                 {
+                   
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slotsObj[i].transform, false);
                     inventory.FillArtickleIdList();

@@ -52,7 +52,7 @@ public class Quests : MonoBehaviour
                 Slot slot = allUIArticles[i].GetComponent<Slot>();
                 if (slot == null || slot.transform.childCount <= 0)
                 {
-                    return;
+                    continue;
                 }
                 if(slot.GetComponentInChildren<ItemUIDescription>().idArticle == desiredObjectId)
                 {

@@ -27,10 +27,14 @@ public class Slot : MonoBehaviour
     public void DropItem() // if you are in range and it´s a right item
     {
          foreach (Transform child in transform)
+          {
+            if (transform.childCount <= 0)
             {
-                GameObject.Destroy(child.gameObject);
-               
+                continue;
             }
+            GameObject.Destroy(child.gameObject);
+               
+          }
        
 
     }
@@ -45,6 +49,15 @@ public class Slot : MonoBehaviour
         lastArticleId = selectedArticleId;
         selectedArticleId = articleId.idArticle;
         Debug.Log("ArticleIsSelected " + selectedArticleId); // lastSelected newSelected
-        isChecking = true;
+
+        if(lastArticleId == selectedArticleId)
+        {
+            isChecking = false;
+        }
+        else
+        {
+            isChecking = true;
+        }
+        Debug.Log("isChecking " + isChecking);
     }
 }

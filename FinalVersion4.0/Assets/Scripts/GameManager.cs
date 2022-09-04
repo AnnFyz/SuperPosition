@@ -15,18 +15,15 @@ public class GameManager : MonoBehaviour
     public GameObject optionsScreen;
     public Health playerHealth;
     // win scene
-    private void Awake()
+    private void Start()
     {
         pauseScreen.SetActive(false);
         optionsScreen.SetActive(false);
         loseScreen.SetActive(false);
         indexScene++;
-    }
-
-    private void Start()
-    {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
+
 
         public void LoadScene()
     {
