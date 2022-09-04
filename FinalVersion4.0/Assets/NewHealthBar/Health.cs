@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     public float healingFreq = 1f;
     public  int healingAmount = 1;
     public Animator playerAnim;
-    void Awake () {
+    void Start () {
         currentHealth = maxHealth;
         playerAnim = GetComponentInChildren<Animator>();
     }

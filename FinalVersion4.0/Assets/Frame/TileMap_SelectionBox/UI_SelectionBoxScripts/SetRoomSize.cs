@@ -28,7 +28,7 @@ public class SetRoomSize : MonoBehaviour
     {
         isGameActive = true;
         selectedTileList = new List<SelectedTile>();
-         this.SelectionBox = GetComponent<RectTransform>();
+        this.SelectionBox = GetComponent<RectTransform>();
          
 
             fourCornersArray = new Vector3[4];

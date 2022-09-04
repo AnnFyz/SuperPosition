@@ -6,7 +6,6 @@ TagManager:
   tags:
   - GreenTeleporter
   - OrangeTeleporter
-  - PinkTeleporter
   - Room6
   - RoomCollider
   - Enemy

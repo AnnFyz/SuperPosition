@@ -9,12 +9,13 @@ public class UnlockRoom : MonoBehaviour
     public CreateSpace spaceInRoom;
     private void Awake()
     {
-        draggableFrame = transform.Find("Frame").gameObject;
-        spaceInRoom = draggableFrame.GetComponent<CreateSpace>();
-        draggableFrame.SetActive(false);
+       
     }
     void Start()
     {
+        draggableFrame = transform.Find("Frame").gameObject;
+        spaceInRoom = draggableFrame.GetComponent<CreateSpace>();
+        draggableFrame.SetActive(false);
         //spaceInRoom.CleanRoom();
         if (IsRoomUnlocked)
         {

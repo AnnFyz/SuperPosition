@@ -7,7 +7,7 @@ public class SelectedTile : MonoBehaviour
     private GameObject Tile;
 
 
-    private void Awake()
+    private void Start()
     {
         Tile = transform.Find("Tile").gameObject;
 
@@ -16,6 +16,9 @@ public class SelectedTile : MonoBehaviour
 
     public void SetSelectedVisible(bool visible)
     {
+        if (Tile == null)
+            return;
+
         Tile.SetActive(visible);
     }
 

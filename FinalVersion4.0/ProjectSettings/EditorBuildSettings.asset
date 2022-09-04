@@ -20,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ScenesLevels/GoodEnding.unity
     guid: 9107b93030f998a408c42e03524979ad
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/ScenesLevels/BadEnding.unity
     guid: d37f7e079dad80b4c83424d233de965d
